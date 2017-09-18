@@ -19,3 +19,6 @@ session-saver.py
 数据分布如图:
 ![数据分布scatter图](screenshots/LineR.png)
 
+训练过程输出,参考v1.5/console.md
+
+
