@@ -21,18 +21,6 @@ session-saver.py
 最终学习到的W,b无限接近0.1, 0.3<br/>
 另外, 想查看训练过程输出,参考v1.5/console.md
 
-<pre><code>
-W = tf.Variable(tf.random_uniform(shape=[1], minval=-1.0, maxval=1.0), name='W')
-# 生成1维的b矩阵, 初始值是0
-b = tf.Variable(tf.zeros(shape=[1]), name='b')
-# 经过计算得到预估值y
-y = W*x_data + b
-
-# 以预估值y和实际值y_data之间的均方误差作为损失,
-# tf.reduce_mean作用: 先求和, 结果再取平均值
-tmp = tf.square(y - y_data)
-loss = tf.reduce_mean(tmp, name='loss')
-</code></pre>
 
 
 
