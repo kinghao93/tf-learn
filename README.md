@@ -21,32 +21,18 @@ session-saver.py
 最终学习到的W,b无限接近0.1, 0.3<br/>
 另外, 想查看训练过程输出,参考v1.5/console.md
 
-#### v1.6
----------------
-主要讲, 如何使用tensorflow提供的封装好的方法, 自动下载并解析得到mnist, 以及如何进一步使用
-提取到的图像:
-![示例图片](screenshots/mnist_1354.png)
-注意: 使用matplotlib显示图像时, 如果不想显示坐标轴刻度,可以使用
-```python
-plt.axis('off') # 不显示刻度
-```
+<pre><code>
+W = tf.Variable(tf.random_uniform(shape=[1], minval=-1.0, maxval=1.0), name='W')
+# 生成1维的b矩阵, 初始值是0
+b = tf.Variable(tf.zeros(shape=[1]), name='b')
+# 经过计算得到预估值y
+y = W*x_data + b
 
-#### v1.7 v1.8
-------------------
-实现最简单的logistic逻辑回归模型, 完成mnist数据集的分类任务
-
->v1.7
->>这一部分作为后面的基础, 主要还是关于 使用tensorflow封装的input_data模块, 解析得到mnist数据集中的数据, 并查看其中label中数据输出:<br/>
-<pre><code>(55000, 784)
-(55000, 10)
-(10000, 784)
-(10000, 10)
-[ 0.  0.  0.  0.  0.  0.  0.  1.  0.  0.]
+# 以预估值y和实际值y_data之间的均方误差作为损失,
+# tf.reduce_mean作用: 先求和, 结果再取平均值
+tmp = tf.square(y - y_data)
+loss = tf.reduce_mean(tmp, name='loss')
 </code></pre>
-
-
-
-
 
 
 
