@@ -26,6 +26,7 @@ session-saver.py
 主要讲, 如何使用tensorflow提供的封装好的方法, 自动下载并解析得到mnist, 以及如何进一步使用
 提取到的图像:
 ![示例图片](screenshots/mnist_1354.png)
+
 注意: 使用matplotlib显示图像时, 如果不想显示坐标轴刻度,可以使用
 ```python
 plt.axis('off') # 不显示刻度
