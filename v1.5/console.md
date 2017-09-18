@@ -1,3 +1,4 @@
+```bash
 ssh://wanghao@211.71.75.112:22/home/wanghao/tensorflow/bin/python -u /home/wanghao/Documents/remote/v1.5/LinerR.py
 2017-09-18 14:47:22.732406: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
 2017-09-18 14:47:22.732431: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
@@ -37,3 +38,4 @@ W= [ 0.0999597] b= [ 0.29854199] loss= 0.000950879
 W= [ 0.09959696] b= [ 0.29855689] loss= 0.000950653
 
 Process finished with exit code 0
+```
