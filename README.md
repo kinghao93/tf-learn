@@ -21,6 +21,15 @@ session-saver.py
 最终学习到的W,b无限接近0.1, 0.3<br/>
 另外, 想查看训练过程输出,参考v1.5/console.md
 
+如果想要可视化计算图和loss变化曲线，可以在源代码基础上做出简单变动：
+<pre><code>with tf.Session() as sess:
+    # 合并到Summary中
+    merged = tf.summary.merge_all()
+    # 选定可视化存储目录
+    writer = tf.summary.FileWriter("tb-graph/", sess.graph)
+    sess.run(tf.global_variables_initializer())
+</code></pre>
+![](screenshots/loss-scalar.png)
 #### v1.6
 ---------------
 主要讲, 如何使用tensorflow提供的封装好的方法, 自动下载并解析得到mnist, 以及如何进一步使用
